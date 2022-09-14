@@ -1,12 +1,11 @@
 package com.example.forex.service;
 
-import com.example.forex.model.Forex;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.*;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
+
 import java.io.IOException;
 
 @Service
@@ -27,7 +26,6 @@ public  class ForexService {
                 .build();
         Response response = client.newCall(request).execute();
         String forex = response.body().string();
-        Forex values = mapper.readValue(forex, Forex.class);
         JsonNode val = mapper.readTree(forex);
         return val;
     }
