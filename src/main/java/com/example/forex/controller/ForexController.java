@@ -1,12 +1,9 @@
 package com.example.forex.controller;
 
 
-import com.example.forex.model.Forex;
 import com.example.forex.service.ForexService;
 import com.fasterxml.jackson.databind.JsonNode;
-import okhttp3.ResponseBody;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
